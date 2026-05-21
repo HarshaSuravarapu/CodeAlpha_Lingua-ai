@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LinguaAI Translator</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div class="container">
+
+    <h1>🌍 LinguaSutra</h1>
+    <p class="subtitle">Smart AI Language Translator</p>
+
+    <!-- INPUT -->
+    <div class="card">
+
+      <textarea id="inputText" placeholder="Enter text here..."></textarea>
+
+      <div class="controls">
+
+        <select id="sourceLang">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="fr">French</option>
+        </select>
+
+        <button id="swapBtn">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+
+        <select id="targetLang">
+          <option value="hi">Hindi</option>
+          <option value="en">English</option>
+          <option value="ta">Tamil</option>
+          <option value="te">Telugu</option>
+          <option value="fr">French</option>
+        </select>
+
+      </div>
+
+      <button class="translate-btn" onclick="translateText()">
+        Translate
+      </button>
+
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="card output-card">
+
+      <h3>Translated Text</h3>
+
+      <div id="translatedText"></div>
+
+      <div class="buttons">
+
+        <button onclick="copyText()">
+          <i class="fa-solid fa-copy"></i>
+        </button>
+
+        <button onclick="speakText()">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <button onclick="startVoiceInput()">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

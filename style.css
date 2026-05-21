@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #312e81
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at top left, #06b6d4, transparent 30%),
+    radial-gradient(circle at bottom right, #7c3aed, transparent 30%);
+  animation: moveBg 10s infinite alternate;
+}
+
+@keyframes moveBg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  z-index: 10;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+textarea::placeholder {
+  color: #ddd;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+select,
+#swapBtn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 1rem;
+}
+
+option {
+  color: black;
+}
+
+.translate-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #7c3aed
+  );
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.translate-btn:hover {
+  transform: scale(1.03);
+}
+
+.output-card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+#translatedText {
+  min-height: 120px;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #06b6d4;
+}
+
+@media(max-width: 768px) {
+
+  .controls {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+}
